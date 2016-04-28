@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xp:eventHandler event="onClientLoad" submit="false">
+		<xp:this.script><![CDATA[$(document).ready(function() {
+
+  if ($("#ccSearchInput").val() === '') {
+    $("#clearBtn").hide();
+  }
+
+  $("#ccSearchInput").on('keyup', function() {
+    if ($(this).val() !== '') {
+      $("#clearBtn").show();
+    } else {
+      $("#clearBtn").hide();
+    }
+  });
+
+  $("#clearBtn").click(function() {
+    $("#ccSearchInput").val('').focus();
+    $(this).hide();
+  });
+});]]></xp:this.script>
+	</xp:eventHandler>
+	<xc:ccCDNResources></xc:ccCDNResources>
+
+	
+
+	<div class="row" style="float:right">
+		<div class="col-xs-4">
+			<div class="input-group">
+				<input type="text" class="form-control"
+					id="ccSearchInput" placeholder="Search for..." />
+				<div class="input-group-addon" id="clearBtn">
+					<i class="glyphicon glyphicon-remove-circle"></i>
+				</div>
+				<div class="input-group-addon" id="searchBtn">
+					<i class="glyphicon glyphicon-search"></i>
+				</div>
+			</div>
+			<!-- <span class="" id="ccSearchClear"></span> -->
+		</div>
+	</div>
+</xp:view>
