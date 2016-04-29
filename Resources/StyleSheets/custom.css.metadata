@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<stylesheetresource xmlns="http://www.lotus.com/dxl" charset="UTF-8" comment="CSS for backend and frontend, also some widget css" name="custom.css" publicaccess="false"/>
+<stylesheetresource xmlns="http://www.lotus.com/dxl" charset="UTF-8" comment="CSS for application" name="custom.css" publicaccess="false"/>

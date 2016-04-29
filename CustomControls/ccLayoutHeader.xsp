@@ -17,15 +17,35 @@
 						</li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						<li>
-							<p class="navbar-text">
-								<i class="fa fa-user" />
-								<xp:text escape="true"
-									styleClass="navbar-username">
+					
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+								<i class="fa fa-user"></i>
+								<xp:text escape="true" styleClass="navbar-username">
 									<xp:this.value><![CDATA[#{javascript:@Name("[CN]",session.getEffectiveUserName())}]]></xp:this.value>
 								</xp:text>
-							</p>
+								<b class="caret"></b>
+							</a>
+
+							<ul class="dropdown-menu">
+								<li>
+									<xp:link escape="true" id="link8" value="/login.xsp">
+										<i class="fa fa-sign-in"></i>
+										<xp:this.text><![CDATA[#{javascript:language.getLanguageString("menu.top.configuration.login")}]]></xp:this.text>
+									</xp:link>
+								</li>
+								
+								<li>
+									<xp:link escape="true" id="link2">
+										<xp:this.value><![CDATA[#{javascript:"/" + database.getFilePath() + "?logout&redirectto=" + "/" + database.getFilePath();}]]></xp:this.value><i class="fa fa-sign-out"></i>
+										<xp:this.text><![CDATA[#{javascript:language.getLanguageString("menu.top.configuration.logout")}]]></xp:this.text>
+									</xp:link>
+								</li>
+					
+							</ul>
 						</li>
+
+						
 						<xc:ccLanguageConfigurationMenu>
 							<xc:this.rendered><![CDATA[#{javascript:database.queryAccessRoles(session.getEffectiveUserName()).contains('[Admin]');}]]></xc:this.rendered>
 						</xc:ccLanguageConfigurationMenu>

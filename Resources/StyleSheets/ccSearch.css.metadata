@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<stylesheetresource xmlns="http://www.lotus.com/dxl" charset="UTF-8" name="ccSearch.css" publicaccess="false"/>
+<stylesheetresource xmlns="http://www.lotus.com/dxl" charset="UTF-8" comment="Search Module" name="ccSearch.css" publicaccess="false"/>

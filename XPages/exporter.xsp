@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xp:view xmlns:xp="http://www.ibm.com/xsp/core" rendered="false">
-	
-	
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" rendered="false">XAgent to export the default property file
 	<xp:this.beforePageLoad>
    <![CDATA[#{javascript:fileController.exportDefaultPropertyFile();}]]>   
  </xp:this.beforePageLoad>

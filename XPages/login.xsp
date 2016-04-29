@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" createForm="false">
+
+	<xp:this.resources>
+		<xp:styleSheet href="/ccLogin.css" />
+	</xp:this.resources>
+	<div class="container">
+		<div class="login-container">
+
+			<div class="avatar">
+				<i class="fa fa-users fa-3" aria-hidden="true" />
+			</div>
+			<div class="form-box">
+				<form accept-charset="UTF-8" role="form" method="post"
+					action="/names.nsf?login">
+					<input class="form-control" placeholder="Username" name="username"
+						type="text" />
+
+					<input class="form-control" placeholder="Password" name="password"
+						type="password" value="" />
+
+					<input type="hidden" name="redirectto"
+						value="#{javascript:'/'+database.getFilePath()}" />
+
+
+					<div class="row">
+						<div class="col-lg-6">
+							
+							<xp:button styleClass="btn btn-info btn-block login" type="submit" value="Login me in"></xp:button>
+
+						</div>
+						<div class="col-lg-6">
+						
+							
+							<xp:link escape="true" text="Cancel" styleClass="btn btn-danger btn-block cancel"
+								id="link1" value="/index.xsp">
+							</xp:link>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+</xp:view>
