@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<header class="navbar navbar-fixed-top" id="top">
+		<div class="navbar-inner">
+			<div class="container">
+				<div class="navbar-header" />
+				<nav class="collapse navbar-collapse bs-navbar-collapse"
+					role="navigation">
+					<ul class="nav navbar-nav">
+						<li>
+							<xp:link escape="true"
+								value="/index.xsp">
+								<i class="fa fa-home" />
+								<xp:this.text><![CDATA[#{javascript:language.getLanguageString("menu.top.homepage")}]]></xp:this.text>
+							</xp:link>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<p class="navbar-text">
+								<i class="fa fa-user" />
+								<xp:text escape="true"
+									styleClass="navbar-username">
+									<xp:this.value><![CDATA[#{javascript:@Name("[CN]",session.getEffectiveUserName())}]]></xp:this.value>
+								</xp:text>
+							</p>
+						</li>
+						<xc:ccLanguageConfigurationMenu>
+							<xc:this.rendered><![CDATA[#{javascript:database.queryAccessRoles(session.getEffectiveUserName()).contains('[Admin]');}]]></xc:this.rendered>
+						</xc:ccLanguageConfigurationMenu>
+						<xc:ccLanguageTopMenu />
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+</xp:view>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+<li>
+	<p class="navbar-text">
+		<i class="fa fa-globe"></i>
+		<xp:text escape="true" id="computedField5" disableOutputTag="false">
+			<xp:this.value><![CDATA[#{javascript:userpreference.getUserLanguage();}]]></xp:this.value>
+		</xp:text>
+	</p>
+</li>
+</xp:view>

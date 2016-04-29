@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<div id="buttonBar" class="buttonBar">
+		<div class="button-bar-left">
+			<xp:callback facetName="buttons" id="buttons"></xp:callback>
+		</div>
+		<div class="button-bar-right">
+			
+		</div>
+	</div>
+</xp:view>

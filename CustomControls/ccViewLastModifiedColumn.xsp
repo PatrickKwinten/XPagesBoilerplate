@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	
+	<xp:viewColumn columnName="lastmodified" id="viewColumn4">
+		<xp:this.converter>
+			<xp:convertDateTime>
+				<xp:this.pattern><![CDATA[${configBean.configuration.dateformat}]]></xp:this.pattern>
+			</xp:convertDateTime>
+		</xp:this.converter>
+		<xp:viewColumnHeader id="viewColumnHeader4">
+			<xp:this.value><![CDATA[#{javascript:language.getLanguageString("column.header.last.modified")}]]></xp:this.value>
+		</xp:viewColumnHeader>
+	</xp:viewColumn>
+</xp:view>

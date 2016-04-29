@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.5" replicaid="C1257FA3003CC53A" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="17e" sequence="30" unid="D4A63A13887A1F98C1257FA3003F657A">
-<created><datetime dst="true">20160428T133227,46+02</datetime></created>
-<modified><datetime dst="true">20160428T142225,64+02</datetime></modified>
-<revised><datetime dst="true">20160428T142225,63+02</datetime></revised>
-<lastaccessed><datetime dst="true">20160428T142225,64+02</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20160428T133227,47+02</datetime></addedtofile></noteinfo>
+<noteinfo noteid="22da" sequence="8" unid="B61574B536F21389C1257FA4002E5F32">
+<created><datetime dst="true">20160429T102630,26+02</datetime></created>
+<modified><datetime dst="true">20160429T102633,45+02</datetime></modified>
+<revised><datetime dst="true">20160429T102633,44+02</datetime></revised>
+<lastaccessed><datetime dst="true">20160429T102633,45+02</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20160429T102630,27+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Patrick Kwinten/O=quintessens</name></updatedby>
 <wassignedby><name>CN=Patrick Kwinten/O=quintessens</name></wassignedby>
-<item name="$Flags"><text>gC~4;</text></item>
 <item name="$TITLE"><text>ccSearch.xsp</text></item>
-
-
-
+<item name="$Flags"><text>gC~4;</text></item>
 
 
 <item name="$FileNames" sign="true"><text>ccSearch.xsp</text></item>
+
+
 <item name="$DesignerVersion"><text>8.5.1</text></item>
+
 
 
 

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom"
+	xmlns:xe="http://www.ibm.com/xsp/coreex"
+	xmlns:openntf="http://www.openntf.org/xsp/custom">
+
+	<xc:ccLayout>
+		<div id="mainContainer" class="form-horizontal">
+
+			<xp:text escape="true" id="computedField1"
+				tagName="legend">
+				<xp:this.value><![CDATA[#{javascript:language.getLanguageString("page.importer.title")}]]></xp:this.value>
+			</xp:text>
+			<div id="fields">
+				<!-- Upload field -->
+				<div class="control-group">
+					<xp:label id="label6" for="inputName"
+						styleClass="control-label">
+						<xp:this.value><![CDATA[#{javascript:language.getLanguageString("page.importer.select.upload")}]]></xp:this.value>
+					</xp:label>
+					<div class="controls">
+						<xp:panel styleClass='input-group' id='fileupload1'>
+							<span class="input-group-btn">
+								<span class="btn btn-primary btn-file">				
+									<xp:fileUpload id="fileUpload3"
+										value="#{fileController.uploadFile}">					
+										<xp:text escape="true" id="computedField2">
+											<xp:this.value><![CDATA[#{javascript:return language.getLanguageString("button.file.upload")}]]></xp:this.value>
+										</xp:text>
+									</xp:fileUpload>
+								</span>
+							</span>
+							<input type="text"
+								id="placeholder"
+								class="form-control" 
+								readonly="readonly" 
+								placeholder="" />
+						</xp:panel>
+					</div>
+				</div>
+
+				<!-- Buttons -->
+				<div class="control-group">
+					<div class="controls">
+						<xp:button id="buttonImport"
+							themeId="Button.Primary">
+							<i class="fa fa-paperclip"></i>
+							<xp:this.value><![CDATA[#{javascript:language.getLanguageString("button.importer.import")}]]></xp:this.value>
+							<xp:eventHandler event="onclick"
+								submit="true" refreshMode="complete" id="eventHandler4">
+								<xp:this.action>
+									<xp:actionGroup>
+										<xp:executeScript>
+											<xp:this.script><![CDATA[#{javascript:fileController.importPropertyFile()}]]></xp:this.script>
+										</xp:executeScript>
+									</xp:actionGroup>
+								</xp:this.action>
+							</xp:eventHandler>
+						</xp:button>
+						<xp:button id="buttonCancel"
+							themeId="Button.Danger">
+							<i class="fa fa-undo"></i>
+							<xp:this.value><![CDATA[#{javascript:language.getLanguageString("button.cancel")}]]></xp:this.value>
+							<xp:eventHandler event="onclick"
+								submit="true" refreshMode="complete" immediate="true"
+								save="false">
+								<xp:this.action>
+									<xp:openPage
+										name="/properties.xsp">
+									</xp:openPage>
+								</xp:this.action>
+							</xp:eventHandler>
+						</xp:button>
+
+						
+					</div>
+				</div>
+				<xp:message id="message1" for="fileUpload2">
+				</xp:message>
+
+			</div>
+
+		</div>
+	</xc:ccLayout>
+
+</xp:view>

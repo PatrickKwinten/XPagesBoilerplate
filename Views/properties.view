@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<view name='properties' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
+ replicaid='C1257FA3003CC53A' showinmenu='false' publicaccess='false' designerversion='8.5.3'
+ unreadmarks='none' onopengoto='lastopened' onrefresh='displayindicator' headers='beveled'
+ opencollapsed='false' showresponsehierarchy='true' showmargin='true' shrinkrows='false'
+ extendlastcolumn='false' showhierarchies='false' unreadcolor='black' rowlinecount='1'
+ headerlinecount='1' rowspacing='1' bgcolor='white' totalscolor='black' headerbgcolor='white'
+ boldunreadrows='false' evaluateactions='false' allownewdocuments='false'
+ allowcustomizations='true' hidemarginborder='false' marginwidth='0px' marginbgcolor='white'
+ uniquekeys='false' formatnoteid='4F13D602CE860793C1257B780035E92A'>
+<noteinfo noteid='1ee' unid='858616325EF7FF01C1257FA300488492' sequence='5'>
+<created><datetime dst='true'>20160428T151205,30+02</datetime></created>
+<modified><datetime dst='true'>20160428T215413,45+02</datetime></modified>
+<revised><datetime dst='true'>20160427T091933,66+02</datetime></revised>
+<lastaccessed><datetime dst='true'>20160428T215413,45+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20160428T151212,99+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Administrator/O=Elstar</name><name>CN=Patrick Kwinten/O=quintessens</name></updatedby>
+<wassignedby><name>CN=Patrick Kwinten/O=quintessens</name></wassignedby><code
+ event='selection'><formula>SELECT Form="property"</formula></code>
+<column sort='ascending' resort='both' hidedetailrows='false' itemname='key'
+ width='8.7500' resizable='true' separatemultiplevalues='false' sortnoaccent='true'
+ sortnocase='true' showaslinks='false'><font style='bold'/><columnheader title='key'><font
+ size='9pt' style='bold'/></columnheader></column>
+<column sort='ascending' hidedetailrows='false' itemname='value' width='8.7500'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
+ showaslinks='false'><font style='bold'/><columnheader title='value'><font
+ size='9pt' style='bold'/></columnheader></column>
+<column sort='ascending' hidedetailrows='false' itemname='code' width='8.7500'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
+ showaslinks='false'><font style='bold'/><columnheader title='code'><font
+ size='9pt' style='bold'/></columnheader></column>
+<column sort='ascending' hidedetailrows='false' itemname='action' width='8.7500'
+ resizable='true' separatemultiplevalues='true' sortnoaccent='true' sortnocase='true'
+ showaslinks='false'><font style='bold'/><columnheader title='action'><font
+ size='9pt' style='bold'/></columnheader></column>
+<column sort='ascending' hidedetailrows='false' itemname='unid' width='8.7500'
+ resizable='true' separatemultiplevalues='true' sortnoaccent='true' sortnocase='true'
+ showaslinks='false'><font style='bold'/><columnheader title='unid'><font
+ size='9pt' style='bold'/></columnheader><code event='value'><formula>@Text(@DocumentUniqueID)</formula></code></column>
+<column hidedetailrows='false' itemname='lastmodified' width='20' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='last updated'><font size='9pt' style='bold'/></columnheader><code
+ event='value'><formula>@Modified</formula></code></column></view>
+

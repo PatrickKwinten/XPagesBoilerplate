@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xe="http://www.ibm.com/xsp/coreex"
+	xmlns:xc="http://www.ibm.com/xsp/custom"
+	beforePageLoad="#{javascript:app.loader();}">
+	<xc:ccDebugToolbar defaultCollapsed="true" collapseTo="left"
+		rendered="#{configBean.configuration.debug}" toolbarColor="#CCC">
+	</xc:ccDebugToolbar>
+	<!-- top nav menu -->
+	<xc:ccLayoutHeader></xc:ccLayoutHeader>
+	<!--  main content area -->
+	<div class="container">
+		<div class="row">
+			<div class="span9">
+				<xp:callback id="callback1" />
+			</div>
+		</div>
+	</div>
+</xp:view>

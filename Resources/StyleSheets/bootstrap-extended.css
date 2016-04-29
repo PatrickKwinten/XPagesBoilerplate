@@ -1,0 +1,345 @@
+body { padding-top: 60px; padding-bottom: 40px; }
+
+
+/*START Basic color style, can be overridden by custom CSS file*/
+header{
+	background-color: #2E0854;	
+}
+	
+header a{
+	color:white;
+}
+
+header .navbar-brand{
+	padding:0px ! important;
+}
+
+
+header .navbar-text{
+	color:#fff;
+}
+
+
+header .navbar-text .navbar-username{
+	margin-left:10px;
+}
+
+.buttonBar{
+	position:relative;
+}
+
+.buttonBar .button-bar-left{
+	position:relative;
+	width:77%; 
+	float:left;
+}
+
+.buttonBar .button-bar-right{
+	position:relative;
+	width:22%; 
+	float:right; 
+	text-align:right;
+	margin-bottom:20px;
+}
+
+/* margin between icons and text in buttons/ links */
+button > i, a > i,button > span, a > span {
+	margin-right: 10px;
+}
+
+/* margin between 2 buttons / button links */
+a + a, button + button, a + button, button + a {
+	margin-left: 5px;	
+}
+
+select.form-control{height: 34px !important;}
+
+.control-label-align-left{
+	text-align: left !important;
+}
+
+.control-label-no-padding{
+	padding-top: 0px !important;
+}
+	
+.modal-content {
+	width: 100%;
+}
+
+.modal-body {
+	font-weight: normal;
+	width: 100%;
+}
+
+.modal-dialog {
+	width: 100%;
+}
+
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+	vertical-align: middle !important;
+}
+
+.has-error{
+	color: #a94442;
+}
+
+.nav-tabs>li.active>a.has-error, .nav-tabs>li.active>a:hover.has-error, .nav-tabs>li.active>a:focus.has-error {
+	color: #a94442;
+ }
+  
+.form-group.form-group-margin-top{padding-top:10px;}	
+.form-control.has-error {border-color: #a94442;}
+
+.bold{font-weight: bold;}
+.debug{border:1px solid red;}
+
+/* Default Radiobutton and Checkbox style */
+input[type="radio"], input[type="checkbox"] {
+	margin-right: 5px;
+}
+
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+	background-color: #fff; 
+}
+
+.btn-radio label, .btn-checkbox label{
+	margin: 0px 10px 0px 0px;
+	font-weight:normal;
+}
+
+button.btn-icon-only{
+	margin:5px;
+}
+icon.btn-icon-only{
+	margin:3px;
+}
+.control-group{
+	margin-bottom:10px;
+}
+
+.icon-search-clear{
+	width:11px !important;
+	padding-left:10px;
+}
+	
+.stacked-fields{
+	height:50px;
+	padding-top:17px;
+	border:1px solid red;
+}
+a, a:hover, a:active{
+	color:#000;	
+}
+
+.input-group-addon-padding{
+	padding:0px 6px 0px 6px;
+}
+	
+.selection-icon{
+	margin-left:10px;
+	top:5px;
+	position:relative;
+}
+.margin-left-10{
+	margin-left:10px;
+}
+	
+.tab-icon{
+	margin-left:10px;
+}
+/*Pagination component style*/
+.pagination {
+	margin:0px !important;
+}
+.pagination > li > a > i, .pagination > li > span > i {
+    margin-left: -1px;
+    padding: 3px 0px 3px 10px;
+    position: relative;
+    text-decoration: none;
+}
+
+.pagination > li > a, .pagination > li > span, .pagination > li > a:hover, .pagination > li > span:hover {
+	color:#000;	
+}
+	
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+    background-color: #ccc;
+    border-color: #ccc;
+    color: #000;
+}
+
+.view-header-left{
+	width:22%; 
+	float:left;
+	margin:10px 0px 10px 0px;
+}
+
+.view-header-right{
+	width:77%; 
+	float:right; 
+	text-align:right;
+	margin:10px 0px 10px 0px;
+}
+/*Radiobuttons component style*/
+.btn-group .btn{border:1px solid #ccc ! important;}
+.btn-group-vertical .btn{border:1px solid #ccc ! important;}
+
+.btn-group .btn:hover, .btn-group-vertical .btn:hover{
+	border:1px solid #ccc ! important;
+	/*background-color:#ddd;*/
+}
+
+
+a.external-link{
+	margin:0px 0px 0px 10px;
+}
+	
+/*File upload*/
+.btn-file {
+    position: relative !important;
+    overflow: hidden !important;
+}
+.btn-file input[type=file] {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    min-width: 100% !important;
+    min-height: 100% !important;
+    font-size: 999px !important;
+    text-align: right !important;
+    filter: alpha(opacity=0) !important;
+    opacity: 0 !important;
+    outline: none !important;
+    background: white !important;
+    cursor: inherit !important;
+    display: block !important;
+}
+
+input[readonly] {
+  background-color: white !important;
+  cursor: text !important;
+}
+
+/* ViewPanel Column style*/
+.table-full-width{
+	float:left;
+	width:100% !important;
+}
+.iconColumn{
+	text-align:center;
+	vertical-align: middle;
+}
+
+.column-icon{
+	text-align:center;
+	vertical-align: middle;
+	width:50px ! important;
+}
+	
+.iconColumn span{
+	display:none;
+}
+
+.deleteButtonColumn{
+	width:50px ! important;
+}
+	
+tr.archived>td{
+	background-color: #f3f3f3;
+}
+
+/*front end of the user wordlists*/
+.user-wordlist-view-badge{
+	position:relative;
+	float:left;
+	margin:5px 0px 5px 0px;;
+	padding:5px;
+	border:1px solid #e3e3e3;
+	width:100%;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.no-border{
+	border:0px !important;
+}
+
+.user-wordlist-view-badge-label{
+	position:relative;
+	float:left;
+	width:49%;
+}
+	
+.user-wordlist-view-badge-answer{
+	position:relative;
+	float:right;
+	width:49%;
+}
+.word-has-error{
+	border:1px solid red;	
+}
+.user-wordlist-view-badge-title{
+	width:100%;
+	font-weight: bold;
+}
+
+.user-wordlist-page-badge{
+	position:relative;
+	float:left;
+	padding:20px;
+	margin-top:20px;
+	border:1px solid #e3e3e3;
+	width:100%;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.user-wordlist-page-badge-counter{
+	position:absolute;
+	font-weight: bold;
+	right:20px;
+	top:20px;
+	font-size:20px;
+}
+
+.user-wordlist-page-badge-word-panel{
+	font-size:36px;
+	height:40px;
+}
+	
+.user-wordlist-page-badge-word{
+	font-weight: bold;
+	text-align: center;
+	font-size:36px;
+}
+
+.user-wordlist-page-badge-buttons{
+	margin-top:20px;
+}
+
+.user-wordlist-page-badge-buttons-left{
+	width:49%;
+	float:left;
+}
+
+.user-wordlist-page-badge-buttons-right{
+	width:49%;
+	float:right;
+	text-align:right;
+}
+
+.user-wordlist-page-badge input.form-control { 
+    text-align: center !important;
+    font-size:36px;
+    height:60px;
+}
+
+.user-wordlist-page-badge-debug{
+	position:relative;
+	float:left;
+	padding:20px;
+	margin-top:20px;
+	width:100%;
+}

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.ibm.com/xsp/core xsdxp://localhost/xsp~core.xsd"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xc:ccLayout>
+	<div id="mainContainer" class="form-horizontal">
+		<xp:text escape="true" id="computedField3" tagName="legend">
+				<xp:this.value><![CDATA[#{javascript:language.getLanguageString("page.error.title")}]]></xp:this.value>
+			</xp:text>
+		<xp:br></xp:br>
+		<xp:br></xp:br>
+		<xp:div id="stackTrace" styleClass="debug"
+			rendered="#{configBean.configuration.debug}">
+			<xp:text escape="true" id="computedField4" tagName="h3"
+				styleClass="noLeftMargin" style="">
+				<xp:this.value><![CDATA[#{javascript:language.getLanguageString("page.error.stacktrace.title")}]]></xp:this.value>
+			</xp:text>
+			<br />
+			<xp:text escape="true" id="computedField1">
+				<xp:this.value>
+					<![CDATA[#{javascript:if(requestScope.error!=null){
+          var output = requestScope.error.toString()+"\n\n";
+          if(requestScope.error instanceof com.ibm.xsp.exception.XSPExceptionInfo){
+            var codeSnippet = requestScope.error.getErrorText(); 
+            var control = requestScope.error.getErrorComponentId();
+            var cause = requestScope.error.getCause();
+            output += "In the control : " + control + "\n\n";
+            if(cause instanceof com.ibm.jscript.InterpretException){
+              var errorLine = cause.getErrorLine();
+              var errorColumn = cause.getErrorCol();
+              output += "At line " + errorLine;
+              output += ", column " + errorColumn + " of:\n";
+            }else{
+              output += "In the script:\n";
+            }
+            output += codeSnippet;
+          }
+          return output;
+         }else{
+         	return "";
+         }
+        }]]>
+				</xp:this.value>
+			</xp:text>
+			<xp:br></xp:br>
+			<xp:br></xp:br>
+			<xp:text escape="false" id="computedField"
+				style="font-size:10pt">
+				<xp:this.value>
+					<![CDATA[#{javascript:var stackTrace = "";
+	if(requestScope.error!=null){				
+          var trace = requestScope.error.getStackTrace();
+          for(var i = 0; i < trace.length; i++){
+            stackTrace += trace[i] + "<br/>";
+          }
+    }
+          return stackTrace;
+        }]]>
+				</xp:this.value>
+			</xp:text>
+		</xp:div>
+		</div>
+	</xc:ccLayout>
+
+</xp:view>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	<li class="dropdown">
+		<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+			<i class="fa fa-cog"></i>
+			<xp:text escape="true" id="computedField1" disableOutputTag="false">
+				<xp:this.value><![CDATA[#{javascript:language.getLanguageString("menu.top.configuration")}]]></xp:this.value>
+			</xp:text>
+			<b class="caret"></b>
+		</a>
+
+		<ul class="dropdown-menu">
+			<li>
+				<xp:link escape="true" id="link8" value="/properties.xsp">
+					<i class="fa fa-list-ul"></i>
+					<xp:this.text><![CDATA[#{javascript:language.getLanguageString("menu.top.configuration.properties")}]]></xp:this.text>
+				</xp:link>
+			</li>
+			
+			<li>
+				<xp:link escape="true" id="link2" value="/languages.xsp">
+					<i class="fa fa-language"></i>
+					<xp:this.text><![CDATA[#{javascript:language.getLanguageString("menu.top.configuration.languages")}]]></xp:this.text>
+				</xp:link>
+			</li>
+
+		</ul>
+	</li>
+</xp:view>

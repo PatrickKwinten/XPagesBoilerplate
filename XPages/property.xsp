@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom"
+	xmlns:xe="http://www.ibm.com/xsp/coreex">
+
+	<xp:this.data>
+		<xp:dominoDocument var="property" formName="property"
+			action="newDocument">
+		</xp:dominoDocument>
+	</xp:this.data>
+
+	<xc:ccLayout>
+		<div id="mainContainer" class="form-horizontal">
+		
+			<xp:text escape="true" id="computedField1" tagName="legend">
+				<xp:this.value><![CDATA[#{javascript:language.getLanguageString("page.property.title")}]]></xp:this.value>
+			</xp:text>
+				<!-- key field -->
+				<div class="control-group">
+					<xp:label id="label2" for="inputName" styleClass="control-label">
+						<xp:this.value><![CDATA[#{javascript:language.getLanguageString("page.property.code")}]]></xp:this.value>
+					</xp:label>
+					<div class="controls">
+						<xp:inputText value="#{property.code}"
+							id="inputText2" readonly="true">
+						</xp:inputText>
+					</div>
+				</div>
+				
+				<!-- key field -->
+				<div class="control-group">
+					<xp:label id="label12" for="inputName" styleClass="control-label">
+						<xp:this.value><![CDATA[#{javascript:language.getLanguageString("page.property.key")}]]></xp:this.value>
+					</xp:label>
+					<div class="controls">
+						<xp:inputText value="#{property.key}"
+							id="inputText9" readonly="true">
+						</xp:inputText>
+					</div>
+				</div>
+				
+				<!-- value field -->
+				<div class="control-group">
+					<xp:label id="label1" for="inputName" styleClass="control-label">
+						<xp:this.value><![CDATA[#{javascript:language.getLanguageString("page.property.value")}]]></xp:this.value>
+					</xp:label>
+					<div class="controls">
+						<xp:inputText value="#{property.value}"
+							id="inputText1">
+						</xp:inputText>
+					</div>
+				</div>
+			</div>	
+				<!-- Buttons -->
+				<div class="control-group">
+					<div class="controls">
+						<xp:button id="buttonSave" themeId="Button.Primary" rendered="#{javascript:property.isEditable()}">
+							<i class="fa fa-floppy-o"></i>
+							<xp:this.value><![CDATA[#{javascript:language.getLanguageString("button.save")}]]></xp:this.value>
+							<xp:eventHandler event="onclick" submit="true"
+								refreshMode="complete" id="eventHandler4">
+								<xp:this.action>
+									<xp:actionGroup>
+										<xp:modifyField name="action"
+											value="saved" var="property">
+										</xp:modifyField>
+										<xp:saveDocument
+											var="property">
+										</xp:saveDocument>
+										<xp:executeScript>
+											<xp:this.script><![CDATA[#{javascript:propertyHandler.updateProperty(property)}]]></xp:this.script>
+										</xp:executeScript>								
+									</xp:actionGroup>
+								</xp:this.action>
+							</xp:eventHandler>
+						</xp:button>
+						
+						<xp:button id="buttonSaveClose" themeId="Button.Success" rendered="#{javascript:property.isEditable()}">
+							<i class="fa fa-floppy-o"></i>
+							<xp:this.value><![CDATA[#{javascript:language.getLanguageString("button.save.close")}]]></xp:this.value>
+							<xc:this.loaded><![CDATA[${javascript:return context.getUser().getRoles().contains('[Admin]')||context.getUser().getRoles().contains('[Editor]')}]]></xc:this.loaded>
+							<xp:eventHandler event="onclick"
+								submit="true" refreshMode="complete" id="eventHandler1">
+								<xp:this.action>
+
+									<xp:actionGroup>
+										<xp:actionGroup>
+											<xp:modifyField name="action"
+											value="saved" var="property">
+										</xp:modifyField>
+										<xp:saveDocument
+											var="property">
+										</xp:saveDocument>
+										<xp:executeScript>
+											<xp:this.script><![CDATA[#{javascript:propertyHandler.updateProperty(property)}]]></xp:this.script>
+										</xp:executeScript>
+										<xp:executeScript
+									script="#{javascript:viewStateBean.restoreState = true}">
+								</xp:executeScript>
+										<xp:openPage
+											name="/properties.xsp">
+										</xp:openPage>
+										</xp:actionGroup>
+
+									</xp:actionGroup>
+								</xp:this.action>
+							</xp:eventHandler>
+						</xp:button>
+						<xp:button id="buttonCancel" themeId="Button.Danger">
+							<i class="fa fa-undo"></i>
+							<xp:this.value><![CDATA[#{javascript:language.getLanguageString("button.cancel")}]]></xp:this.value>
+							<xp:eventHandler event="onclick"
+								submit="true" refreshMode="complete" immediate="true"
+								save="false">
+								<xp:this.action>
+									<xp:actionGroup>
+										<xp:executeScript
+											script="#{javascript:viewStateBean.restoreState = true}">
+										</xp:executeScript>
+										<xp:openPage
+											name="/properties.xsp">
+										</xp:openPage>
+									</xp:actionGroup>
+								</xp:this.action>
+							</xp:eventHandler>
+						</xp:button>
+					</div>
+
+		</div>
+	</xc:ccLayout>
+
+</xp:view>

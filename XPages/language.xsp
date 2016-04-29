@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom"
+	xmlns:xe="http://www.ibm.com/xsp/coreex">
+
+	<xp:this.data>
+		<xp:dominoDocument var="dslanguage" formName="language"
+			action="newDocument">
+		</xp:dominoDocument>
+	</xp:this.data>
+
+	<xc:ccLayout>
+		<div id="mainContainer" class="form-horizontal">
+		
+			<xp:text escape="true" id="computedField1" tagName="legend">
+				<xp:this.value><![CDATA[#{javascript:language.getLanguageString("page.language.title")}]]></xp:this.value>
+			</xp:text>
+
+				<!-- code field -->
+				<div class="control-group">
+					<xp:label id="label12" for="inputName" styleClass="control-label">
+						<xp:this.value><![CDATA[#{javascript:language.getLanguageString("page.language.code")}]]></xp:this.value>
+					</xp:label>
+					<div class="controls">
+						<xp:inputText value="#{dslanguage.code}"
+							id="inputText9">
+						</xp:inputText>
+					</div>
+				</div>
+				
+				<!-- name field -->
+				<div class="control-group">
+					<xp:label id="label1" for="inputName" styleClass="control-label">
+						<xp:this.value><![CDATA[#{javascript:language.getLanguageString("page.language.name")}]]></xp:this.value>
+					</xp:label>
+					<div class="controls">
+						<xp:inputText value="#{dslanguage.name}"
+							id="inputText1">
+						</xp:inputText>
+					</div>
+				</div>
+				
+				</div>	
+				<!-- Buttons -->
+				<div class="control-group">
+					<div class="controls">
+						<xp:button id="buttonSave" themeId="Button.Primary" rendered="#{javascript:dslanguage.isEditable()}">
+							<i class="fa fa-floppy-o"></i>
+							<xp:this.value><![CDATA[#{javascript:language.getLanguageString("button.save")}]]></xp:this.value>
+							<xp:eventHandler event="onclick" submit="true"
+								refreshMode="complete" id="eventHandler4">
+								<xp:this.action>
+									<xp:actionGroup>
+										<xp:modifyField name="action"
+											value="saved" var="dslanguage">
+										</xp:modifyField>
+										<xp:saveDocument
+											var="dslanguage">
+										</xp:saveDocument>
+										<xp:executeScript>
+											<xp:this.script><![CDATA[#{javascript:language.updateLanguage(dslanguage)}]]></xp:this.script>
+										</xp:executeScript>
+										<xp:executeScript>
+											<xp:this.script><![CDATA[#{javascript:propertyHandler.addNewLanguageProperties(dslanguage)}]]></xp:this.script>
+										</xp:executeScript>									
+									</xp:actionGroup>
+								</xp:this.action>
+							</xp:eventHandler>
+						</xp:button>
+						
+						<xp:button id="buttonSaveClose" themeId="Button.Success" rendered="#{javascript:dslanguage.isEditable()}">
+							<i class="fa fa-floppy-o"></i>
+							<xp:this.value><![CDATA[#{javascript:language.getLanguageString("button.save.close")}]]></xp:this.value>
+							<xc:this.loaded><![CDATA[${javascript:return context.getUser().getRoles().contains('[Admin]')||context.getUser().getRoles().contains('[Editor]')}]]></xc:this.loaded>
+							<xp:eventHandler event="onclick"
+								submit="true" refreshMode="complete" id="eventHandler1">
+								<xp:this.action>
+
+									<xp:actionGroup>
+										<xp:actionGroup>
+											<xp:modifyField name="action"
+											value="saved" var="dslanguage">
+										</xp:modifyField>
+										<xp:saveDocument
+											var="dslanguage">
+										</xp:saveDocument>
+										<xp:executeScript>
+											<xp:this.script><![CDATA[#{javascript:language.updateLanguage(dslanguage)}]]></xp:this.script>
+										</xp:executeScript>
+										<xp:executeScript>
+											<xp:this.script><![CDATA[#{javascript:propertyHandler.addNewLanguageProperties(dslanguage)}]]></xp:this.script>
+										</xp:executeScript>
+										<xp:executeScript
+									script="#{javascript:viewStateBean.restoreState = true}">
+								</xp:executeScript>
+										<xp:openPage
+											name="/languages.xsp">
+										</xp:openPage>
+										</xp:actionGroup>
+
+									</xp:actionGroup>
+								</xp:this.action>
+							</xp:eventHandler>
+						</xp:button>
+						<xp:button id="buttonCancel" themeId="Button.Danger">
+							<i class="fa fa-undo"></i>
+							<xp:this.value><![CDATA[#{javascript:language.getLanguageString("button.cancel")}]]></xp:this.value>
+							<xp:eventHandler event="onclick"
+								submit="true" refreshMode="complete" immediate="true"
+								save="false">
+								<xp:this.action>
+
+
+									<xp:actionGroup>
+										<xp:executeScript
+											script="#{javascript:viewStateBean.restoreState = true}">
+										</xp:executeScript>
+										<xp:openPage
+											name="/languages.xsp">
+										</xp:openPage>
+									</xp:actionGroup>
+								</xp:this.action>
+							</xp:eventHandler>
+						</xp:button>
+					</div>
+
+		</div>
+	</xc:ccLayout>
+
+</xp:view>

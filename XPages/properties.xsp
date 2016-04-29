@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom"
+	xmlns:xe="http://www.ibm.com/xsp/coreex">
+	
+	<xc:ccLayout>
+		<xc:ccViewButtonBar>
+		<xp:this.facets>
+			<xp:panel xp:key="buttons" id="panel1">
+				<xp:button id="buttonDelete">
+		<i class="fa fa-recycle"></i>
+		<xp:this.value><![CDATA[#{javascript:language.getLanguageString("button.configuration.properties.delete")}]]></xp:this.value>
+		<xp:eventHandler event="onclick" submit="true">
+			<xp:this.action>
+				<xp:actionGroup>
+
+					<xp:executeScript>
+						<xp:this.script><![CDATA[#{javascript:propertiesController.removeProperties();
+}]]></xp:this.script>
+					</xp:executeScript>
+				</xp:actionGroup>
+			</xp:this.action>
+		</xp:eventHandler>
+	</xp:button>	
+	<xp:button id="buttonLoadPropertiesFiles">
+		<i class="fa fa-file"></i>
+		<xp:this.value><![CDATA[#{javascript:language.getLanguageString("button.configuration.properties.load")}]]></xp:this.value>
+		<xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+			<xp:this.action>
+				<xp:actionGroup>
+					<xp:executeScript>
+						<xp:this.script><![CDATA[#{javascript:propertyHandler.loadPropertiesFromFile();
+}]]></xp:this.script>
+					</xp:executeScript>
+				</xp:actionGroup>
+			</xp:this.action>
+		</xp:eventHandler>
+	</xp:button>
+	
+	<xp:button id="buttonRefresh">
+		<i class="fa fa-list-ul"></i>
+		<xp:this.value><![CDATA[#{javascript:language.getLanguageString("button.configuration.properties.refresh")}]]></xp:this.value>
+
+		<xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+			<xp:this.action>
+				<xp:actionGroup>
+					<xp:executeScript>
+						<xp:this.script><![CDATA[#{javascript:propertyHandler.loadPropertiesFromView();
+}]]></xp:this.script>
+					</xp:executeScript>
+				</xp:actionGroup>
+			</xp:this.action>
+		</xp:eventHandler>
+	</xp:button>
+	<xp:button id="buttonImport">
+		<i class="fa fa-upload"></i>
+		<xp:this.value><![CDATA[#{javascript:language.getLanguageString("button.configuration.properties.import")}]]></xp:this.value>
+
+		<xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+			<xp:this.action>
+				<xp:openPage name="/importer.xsp" target="newDocument"></xp:openPage>
+			</xp:this.action>
+		</xp:eventHandler>
+	</xp:button>
+	
+	<xp:button id="buttonExport" themeId="Button.Primary">
+		<i class="fa fa-download"></i>
+		<xp:this.value><![CDATA[#{javascript:language.getLanguageString("button.configuration.properties.export")}]]></xp:this.value>
+		<xp:eventHandler event="onclick" submit="true"
+		    refreshMode="partial" refreshId="buttonExport">
+		    <xp:this.action><![CDATA[#{javascript:
+		      //execute server side code here to determine a target url
+		      var target = "exporter.xsp";
+		      view.postScript("window.open('" + target + "')");}]]>
+		    </xp:this.action>
+		  </xp:eventHandler>
+	</xp:button>
+	
+	</xp:panel>
+		</xp:this.facets>
+		</xc:ccViewButtonBar>
+
+	<xe:pagerSaveState id="pagerSaveState1" for="viewPanel1"></xe:pagerSaveState>
+
+	<xp:viewPanel rows="30" id="viewPanel1" target="_self" var="entry"
+		pageName="/property.xsp" rendered="true">
+				<xp:this.facets>
+			<xp:panel xp:key="headerPager" id="panel2">
+				<div class="view-header-left">
+				<xe:pagerExpand id="pagerExpand1" for="viewPanel1">
+					<xe:this.collapseText><![CDATA[#{javascript:language.getLanguageString("pager.collapse")}]]></xe:this.collapseText>
+					<xe:this.expandText><![CDATA[#{javascript:language.getLanguageString("pager.expand")}]]></xe:this.expandText>
+				</xe:pagerExpand>
+				</div>
+				<div class="view-header-right">
+					<xp:pager partialRefresh="true"
+						layout="Previous Group Next" id="pager2">
+					</xp:pager>
+				</div>
+			</xp:panel>
+			<xp:panel xp:key="footerPager" id="panel3">
+				<div class="view-header-right">
+					<xe:pagerSizes id="pagerSizes1" for="viewPanel1">
+						<xe:this.text><![CDATA[#{javascript:language.getLanguageString("pager.items.per.page")}]]></xe:this.text>
+					</xe:pagerSizes>
+				</div>
+			</xp:panel>
+		</xp:this.facets>
+		<xp:this.data>
+			<xp:dominoView var="view1" viewName="propertiesByCode"
+				searchFuzzy="true"
+				expandLevel="1">
+					<xp:this.search><![CDATA[#{app.searchValue}]]></xp:this.search>
+			</xp:dominoView>
+		</xp:this.data>
+	
+		<xp:viewColumn columnName="code" id="viewColumn1">
+			<xp:viewColumnHeader id="viewColumnHeader1">
+				<xp:this.value><![CDATA[#{javascript:language.getLanguageString("column.header.code")}]]></xp:this.value>
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		
+		<xp:viewColumn value="" id="viewColumn12" showCheckbox="true">
+			<xp:viewColumnHeader id="viewColumnHeader12"
+				showCheckbox="false">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+
+		<xp:viewColumn value="" id="viewColumn9">
+			<xp:viewColumnHeader id="viewColumnHeader9">
+			</xp:viewColumnHeader>
+			<xp:link escape="true" text="" id="link1">
+				<i class="fa fa-pencil-square-o"></i>
+				<xp:eventHandler event="onclick" submit="true"
+					refreshMode="complete">
+					<xp:this.action>
+						<xp:openPage name="/property.xsp"
+							target="editDocument">
+							<xp:this.documentId><![CDATA[#{javascript:entry.getColumnValue("unid");}]]></xp:this.documentId>
+						</xp:openPage>
+					</xp:this.action>
+				</xp:eventHandler>
+			</xp:link>
+		</xp:viewColumn>
+
+		<xp:viewColumn value="" id="viewColumn14">
+			<xp:viewColumnHeader id="viewColumnHeader14">
+			</xp:viewColumnHeader>
+			<xp:link escape="true" text="" id="link2">
+				<i class="fa fa-eye"></i>
+				<xp:eventHandler event="onclick" submit="true"
+					refreshMode="complete">
+					<xp:this.action>
+						<xp:openPage name="/property.xsp"
+							target="openDocument">
+							<xp:this.documentId><![CDATA[#{javascript:entry.getColumnValue("unid");}]]></xp:this.documentId>
+						</xp:openPage>
+					</xp:this.action>
+				</xp:eventHandler>
+			</xp:link>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="key" id="viewColumn5">
+			<xp:viewColumnHeader id="viewColumnHeader5">
+				<xp:this.value><![CDATA[#{javascript:language.getLanguageString("column.header.key")}]]></xp:this.value>
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+
+		<xp:viewColumn columnName="value" id="viewColumn11">
+			<xp:viewColumnHeader id="viewColumnHeader11">
+				<xp:this.value><![CDATA[#{javascript:language.getLanguageString("column.header.value")}]]></xp:this.value>
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+
+		<xc:ccViewLastModifiedColumn/>
+	</xp:viewPanel>
+	</xc:ccLayout>
+</xp:view>

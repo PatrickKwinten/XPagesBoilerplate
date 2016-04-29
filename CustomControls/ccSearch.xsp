@@ -22,7 +22,7 @@
   });
 });]]></xp:this.script>
 	</xp:eventHandler>
-	<xc:ccCDNResources></xc:ccCDNResources>
+	<xc:ccResourcesCDN/>
 
 	
 
