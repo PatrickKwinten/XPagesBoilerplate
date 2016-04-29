@@ -1,22 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.5" replicaid="C1257FA3003CC53A" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="22d6" sequence="16" unid="0AA3EA81A2161820C1257FA4002E5EF4">
-<created><datetime dst="true">20160429T102629,64+02</datetime></created>
-<modified><datetime dst="true">20160429T112257,02+02</datetime></modified>
-<revised><datetime dst="true">20160429T112257,01+02</datetime></revised>
-<lastaccessed><datetime dst="true">20160429T112257,02+02</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20160429T102629,65+02</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Patrick Kwinten/O=quintessens</name></updatedby>
-<wassignedby><name>CN=Patrick Kwinten/O=quintessens</name></wassignedby>
-<item name="$Flags"><text>gC~4;</text></item>
-
-
-<item name="$FileNames" sign="true"><text>ccCDNResources.xsp</text></item>
-
-
-<item name="$TITLE" sign="true"><text>ccResourcesCDN.xsp</text></item>
-<item name="$DesignerVersion"><text>8.5</text></item>
-
-
-
-
+<?xml version="1.0" encoding="UTF-8"?>
+<note xmlns="http://www.lotus.com/dxl" class="form">
+  <item name="$Flags">
+    <text>gC~4;</text>
+  </item>
+  <item name="$FileNames" sign="true">
+    <text>ccCDNResources.xsp</text>
+  </item>
+  <item name="$TITLE" sign="true">
+    <text>ccResourcesCDN.xsp</text>
+  </item>
 </note>

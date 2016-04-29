@@ -1,8 +1,2 @@
-<?xml version="1.0" encoding="UTF-8"?><stylesheetresource charset="UTF-8" comment="Bootstrap" designerversion="8.5.3" maintenanceversion="1.5" name="bootstrap-extended.css" publicaccess="false" replicaid="C1257FA3003CC53A" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="10b2" sequence="124" unid="84C20DD46111B25AC1257E4E003C87F7">
-<created><datetime dst="true">20150523T130109,67+02</datetime></created>
-<modified><datetime dst="true">20160429T113009,30+02</datetime></modified>
-<revised><datetime dst="true">20160429T113009,29+02</datetime></revised>
-<lastaccessed><datetime dst="true">20160429T113009,30+02</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20160428T215350,63+02</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Patrick Kwinten/O=quintessens</name></updatedby></stylesheetresource>
+<?xml version="1.0" encoding="UTF-8"?>
+<stylesheetresource xmlns="http://www.lotus.com/dxl" charset="UTF-8" comment="Bootstrap" name="bootstrap-extended.css" publicaccess="false"/>

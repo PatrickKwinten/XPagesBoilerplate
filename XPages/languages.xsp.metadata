@@ -1,21 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.5" replicaid="C1257FA3003CC53A" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="193e" sequence="14" unid="585DEE4B148131B8C1257E4E003CB062">
-<created><datetime dst="true">20150523T130253,14+02</datetime></created>
-<modified><datetime dst="true">20160428T215351,69+02</datetime></modified>
-<revised><datetime dst="true">20160427T091922,74+02</datetime></revised>
-<lastaccessed><datetime dst="true">20160428T215351,69+02</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20160428T215351,69+02</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Administrator/O=Elstar</name><name>CN=Patrick Kwinten/O=quintessens</name></updatedby>
-<wassignedby><name>CN=Patrick Kwinten/O=quintessens</name></wassignedby>
-<item name="$Comment" sign="true"><text>All the configuration parameters. Loaded in the configuration Bean</text></item>
-<item name="$TITLE"><text>languages.xsp</text></item>
-<item name="$Flags"><text>gC~4K</text></item>
-
-
-<item name="$FileNames" sign="true"><text>languages.xsp</text></item>
-<item name="$DesignerVersion"><text>8.5.3</text></item>
-
-
-
-
+<?xml version="1.0" encoding="UTF-8"?>
+<note xmlns="http://www.lotus.com/dxl" class="form">
+  <item name="$Comment" sign="true">
+    <text>All the configuration parameters. Loaded in the configuration Bean</text>
+  </item>
+  <item name="$TITLE">
+    <text>languages.xsp</text>
+  </item>
+  <item name="$Flags">
+    <text>gC~4K</text>
+  </item>
+  <item name="$FileNames" sign="true">
+    <text>languages.xsp</text>
+  </item>
 </note>

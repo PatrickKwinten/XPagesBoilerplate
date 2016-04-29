@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.5" replicaid="C1257FA3003CC53A" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="1b6" sequence="2" unid="A59492C0D1EDDB92C1257FA300481A4C">
-<created><datetime dst="true">20160428T150733,24+02</datetime></created>
-<modified><datetime dst="true">20160428T215350,65+02</datetime></modified>
-<revised><datetime dst="true">20160427T091921,88+02</datetime></revised>
-<lastaccessed><datetime dst="true">20160428T215350,65+02</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20160428T150733,24+02</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Administrator/O=Elstar</name><name>CN=Patrick Kwinten/O=quintessens</name></updatedby>
-<wassignedby><name>CN=Patrick Kwinten/O=quintessens</name></wassignedby>
-<item name="$TITLE" sign="true"><text>bootstrap4xpages.js</text></item>
-<item name="$Flags"><text>h534Q</text></item>
-<item name="$PublicAccess" sign="true"><text>1</text></item>
-<item name="$DesignerVersion"><text>8.5.3</text></item>
-
-<item name="$POID"><datetime dst="true">20160427T091921,88+02</datetime></item></note>
+<?xml version="1.0" encoding="UTF-8"?>
+<note xmlns="http://www.lotus.com/dxl" class="filter">
+  <item name="$TITLE" sign="true">
+    <text>bootstrap4xpages.js</text>
+  </item>
+  <item name="$Flags">
+    <text>h534Q</text>
+  </item>
+  <item name="$PublicAccess" sign="true">
+    <text>1</text>
+  </item>
+  <item name="$POID">
+    <datetime dst="true">20160427T091921,88+02</datetime>
+  </item>
+</note>

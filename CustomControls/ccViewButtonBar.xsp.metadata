@@ -1,22 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.5" replicaid="C1257FA3003CC53A" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="1916" sequence="14" unid="D0D3C8F4463B0E22C1257E72004736E0">
-<created><datetime dst="true">20150628T145751,04+02</datetime></created>
-<modified><datetime dst="true">20160428T215351,29+02</datetime></modified>
-<revised><datetime dst="true">20160427T091922,48+02</datetime></revised>
-<lastaccessed><datetime dst="true">20160428T215351,29+02</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20160428T215351,29+02</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Administrator/O=Elstar</name><name>CN=Patrick Kwinten/O=quintessens</name></updatedby>
-<wassignedby><name>CN=Patrick Kwinten/O=quintessens</name></wassignedby>
-<item name="$Flags"><text>gC~4;</text></item>
-<item name="$TITLE"><text>ccViewButtonBar.xsp</text></item>
-
-
-
-
-<item name="$FileNames" sign="true"><text>ccViewButtonBar.xsp</text></item>
-<item name="$DesignerVersion"><text>8.5</text></item>
-
-
-
-
+<?xml version="1.0" encoding="UTF-8"?>
+<note xmlns="http://www.lotus.com/dxl" class="form">
+  <item name="$Flags">
+    <text>gC~4;</text>
+  </item>
+  <item name="$TITLE">
+    <text>ccViewButtonBar.xsp</text>
+  </item>
+  <item name="$FileNames" sign="true">
+    <text>ccViewButtonBar.xsp</text>
+  </item>
 </note>
