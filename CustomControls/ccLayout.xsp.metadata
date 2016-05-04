@@ -9,4 +9,7 @@
   <item name="$FileNames" sign="true">
     <text>ccLayout.xsp</text>
   </item>
+  <item name="$Comment" sign="true">
+    <text>Layout module</text>
+  </item>
 </note>

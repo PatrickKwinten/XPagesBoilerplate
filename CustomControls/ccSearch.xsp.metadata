@@ -9,4 +9,7 @@
   <item name="$FileNames" sign="true">
     <text>ccSearch.xsp</text>
   </item>
+  <item name="$Comment" sign="true">
+    <text>Search module</text>
+  </item>
 </note>

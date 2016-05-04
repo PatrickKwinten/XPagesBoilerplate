@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <note xmlns="http://www.lotus.com/dxl" class="form">
-  <item name="$Comment" sign="true">
-    <text>All the configuration parameters. Loaded in the configuration Bean</text>
-  </item>
   <item name="$TITLE">
     <text>property.xsp</text>
   </item>
@@ -11,5 +8,8 @@
   </item>
   <item name="$FileNames" sign="true">
     <text>property.xsp</text>
+  </item>
+  <item name="$Comment" sign="true">
+    <text>Language module</text>
   </item>
 </note>

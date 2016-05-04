@@ -9,4 +9,7 @@
   <item name="$FileNames" sign="true">
     <text>ccLanguageTopMenu.xsp</text>
   </item>
+  <item name="$Comment" sign="true">
+    <text>Language module</text>
+  </item>
 </note>

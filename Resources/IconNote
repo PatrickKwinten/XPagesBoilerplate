@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <note default='true' class='icon' xmlns='http://www.lotus.com/dxl' version='9.0'
  maintenanceversion='1.5' replicaid='C1257FA3003CC53A'>
-<noteinfo noteid='11a' unid='0558EDAF35F0AADAC1257FA3003CC53D' sequence='8'>
+<noteinfo noteid='11a' unid='0558EDAF35F0AADAC1257FA3003CC53D' sequence='10'>
 <created><datetime dst='true'>20160428T130346,53+02</datetime></created>
-<modified><datetime dst='true'>20160428T215503,79+02</datetime></modified>
-<revised><datetime dst='true'>20160428T215503,78+02</datetime></revised>
-<lastaccessed><datetime dst='true'>20160428T215503,79+02</datetime></lastaccessed>
+<modified><datetime dst='true'>20160429T110443,32+02</datetime></modified>
+<revised><datetime dst='true'>20160429T110443,31+02</datetime></revised>
+<lastaccessed><datetime dst='true'>20160429T110443,32+02</datetime></lastaccessed>
 <addedtofile><datetime dst='true'>20160428T130346,57+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Patrick Kwinten/O=quintessens</name></updatedby>
 <item name='IconBitmap' summary='true'>
@@ -27,9 +27,11 @@ AAAAUEECICABAAD/////+A4DgA==
 <item name='$TemplateModTime'><datetime dst='true'>20160428T215322,44+02</datetime></item>
 <item name='$TemplateServerName'><text>CN=Patrick Kwinten/O=quintessens</text></item>
 <item name='$TemplateFileName'><text>CN=dev1/O=quintessens!!apps\others\xpage\ml4xpages.nsf</text></item>
-<item name='$DefaultXPage'><text>homepage.xsp</text></item>
 <item name='$Daos'><text>0</text></item>
-<item name='$Flags'><text>J</text></item>
 <item name='$TITLE'><text>XPagesBoilerplate
-</text></item></note>
+</text></item>
+<item name='$Flags'><text>J!</text></item>
+<item name='$LaunchXPageRunOnServer'><text>0</text></item>
+<item name='$FlagsNoRefresh'><text/></item>
+<item name='$DefaultXPage'><text>index.xsp</text></item></note>
 

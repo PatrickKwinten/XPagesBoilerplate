@@ -9,4 +9,7 @@
   <item name="$FileNames" sign="true">
     <text>index.xsp</text>
   </item>
+  <item name="$Comment" sign="true">
+    <text>Default startpage</text>
+  </item>
 </note>
