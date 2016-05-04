@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom"
+	xmlns:xe="http://www.ibm.com/xsp/coreex">
+	<xc:ccLayout>
+		<div id="mainContainer" class="form-horizontal">
+
+			<xp:text escape="true" id="computedField1"
+				tagName="legend">
+
+				<xp:this.value><![CDATA[#{javascript:return "System Information bean";}]]></xp:this.value>
+			</xp:text>
+
+				<div class="control-group">
+					<xp:label id="label4" for="inputName"
+						styleClass="control-label" value="sysinfo.getUserName()">
+					</xp:label>
+					<div class="controls">
+						<xp:text escape="true" id="computedField5"
+							value="#{javascript:sysinfo.getUserName()}">
+						</xp:text>
+					</div>
+				</div>
+
+				<div class="control-group">
+					<xp:label id="label12" for="inputName" styleClass="control-label" value="sysinfo.createDocuments">
+					</xp:label>
+					<div class="controls">						
+						<xp:text escape="true" id="computedField2" value="#{sysinfo.createDocuments}">
+</xp:text>
+					</div>
+				</div>
+				
+				<div class="control-group">
+					<xp:label id="label1" for="inputName"
+						styleClass="control-label" value="sysinfo.deleteDocuments">
+					</xp:label>
+					<div class="controls">
+						<xp:text escape="true" id="computedField3" value="#{sysinfo.deleteDocuments}">
+</xp:text>						
+					</div>
+				</div>
+				
+				<div class="control-group">
+					<xp:label id="label2" for="inputName"
+						styleClass="control-label" value="sysinfo.getAclLevel()">
+					</xp:label>
+					<div class="controls">
+						<xp:text escape="true" id="computedField6"
+							value="#{javascript:sysinfo.getAclLevel()}">
+						</xp:text>
+					</div>
+				</div>
+				
+				<div class="control-group">
+					<xp:label id="label3" for="inputName"
+						styleClass="control-label" value="sysinfo.getRoles()">
+					</xp:label>
+					<div class="controls">
+						<xp:text escape="true" id="computedField4"
+							value="#{javascript:sysinfo.getRoles()}">
+						</xp:text>
+					</div>
+				</div>
+				
+				</div>	
+				<!-- Buttons -->
+				<div class="control-group">
+					<div class="controls">					
+						
+						
+						
+					</div>
+
+		</div>
+	</xc:ccLayout>
+
+</xp:view>

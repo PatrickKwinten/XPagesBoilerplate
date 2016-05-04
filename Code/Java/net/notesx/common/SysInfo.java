@@ -116,4 +116,9 @@ public class SysInfo implements Serializable {
 		result = hasOption(Database.DBACL_CREATE_DOCS);
 		return result;
 	}
+	public boolean isDeleteDocuments(){
+		boolean result = false;
+		result = hasOption(Database.DBACL_DELETE_DOCS);
+		return result;
+	}
 }
